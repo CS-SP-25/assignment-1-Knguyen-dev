@@ -17,8 +17,8 @@ public abstract class Bidder implements Observer {
 
         /*
          * Core of the Observer Design Pattern. As a result you can create
-         * a Observer, a bidder, and have them listen in no the auction, without having the
-         *
+         * a Observer, a bidder, and have them listen in no the auction, without having to interact with the
+         * code of the Auctioneer itself.
          */
         this.auctioneer.registerObserver(this);
     }

@@ -5,6 +5,10 @@ import Problem3.Observer.Observer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The Auctioneer is the subject as we want to broadcast any changes in the currentBid on an item
+ * to all observers (other bidders).
+ */
 public class Auctioneer implements Subject {
     private float currentBid;
     private List<Observer> bidders;
@@ -24,7 +28,7 @@ public class Auctioneer implements Subject {
     }
 
     /**
-     * Updates all bidders.
+     * This function will update all bidders, notifying them of an update and what happened.
      *
      * @param message The message you're sending to all bidders
      */
@@ -35,6 +39,7 @@ public class Auctioneer implements Subject {
             observer.update(message);
         }
     }
+
 
     public void setMinimumBid(float minBid) {
         this.currentBid = minBid;

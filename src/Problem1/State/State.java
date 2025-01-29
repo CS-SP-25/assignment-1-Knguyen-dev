@@ -30,7 +30,7 @@ public abstract class State {
      */
     public void showTax(double value) {
         double salesTax = this.salesTaxBehavior.compute(value);
-        System.out.printf("The sales tax on $%.2f in %s is $%.2f.", value, this.getName(), salesTax);
+        System.out.printf("The sales tax on $%.2f in %s is $%.2f.", value, this.name, salesTax);
     };
 
     /**

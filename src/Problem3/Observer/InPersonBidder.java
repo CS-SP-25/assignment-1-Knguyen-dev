@@ -16,13 +16,16 @@ public class InPersonBidder extends Bidder {
      * the little sign and yell out a number
      * @param bidAmount Amount they're bidding
      */
-    @Override
+
     public void submitBid(float bidAmount) {
         System.out.println(this.name + " (In-Person) submitted a bid of $" + bidAmount + "!");
         auctioneer.acceptBid(this, bidAmount);
     }
 
-    @Override
+    /**
+     * A function where an observer pays the amount they owe. This happens when the bidding is over and the item has been sold.
+     * @param bidAmount
+     */
     public void payBid(float bidAmount) {
         System.out.println(this.name + " (In-Person) paid $" + bidAmount);
     }
